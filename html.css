@@ -1,0 +1,129 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo do título principal */
+h1 {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+}
+
+/* Estilo dos subtítulos */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #007BFF;
+    text-align: center;
+}
+
+/* Estilo das listas */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Estilo dos itens da lista */
+li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Animação de clique no checkbox */
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="checkbox"]:active {
+    transform: scale(1.5); /* Aumenta o tamanho temporariamente */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Adiciona um brilho azul */
+}
+
+input[type="checkbox"]:checked {
+    transform: scale(1.2); /* Volta ao tamanho normal */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8); /* Mantém um leve brilho */
+}
+
+/* Estilo do cronômetro (se for usado) */
+div.cronometro {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    ul {
+        max-width: 100%;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    input[type="text"] {
+        width: 40px;
+    }
+}
+/* Estilo da mensagem de boas-vindas */
+#welcome-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #007BFF;
+    color: white;
+    padding: 30px 60px; /* Aumenta o tamanho do contêiner */
+    border-radius: 15px; /* Bordas arredondadas */
+    font-size: 28px; /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInOut 4s ease-in-out forwards;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra */
+}
+
+/* Animação de entrada e saída */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    10% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    90% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+}
